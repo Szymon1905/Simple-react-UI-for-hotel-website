@@ -1,0 +1,9 @@
+flexbox
+
+justify content 
+
+sprace around 
+
+media query defiiować na dole 
+
+tag dialog na okno
