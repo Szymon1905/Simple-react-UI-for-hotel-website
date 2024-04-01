@@ -163,8 +163,17 @@ body{
     background-image: url(./Assets/cards3.jpg);
 }
 
+.page-details-info{
+    height: auto;
+}
 
+.page-details-info>.text-small{
+    margin: 17px;
+}
 
+.text-for-one{
+    padding: 15px;
+}
 
 .hero-image-container{
     border-radius: var(--radius-large);
