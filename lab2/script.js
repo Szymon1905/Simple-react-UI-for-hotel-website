@@ -62,8 +62,8 @@ function make_delete_button() {
     delete_button.style.backgroundPosition = "center";
 
     var div_for_button = document.createElement("div");
-    delete_button.style.width = "42px";
-    delete_button.style.height = "45px";
+    delete_button.style.width = "44px";
+    delete_button.style.height = "51px";
 
     delete_button.className = "delete_button";
     delete_button.onclick = usun_element;

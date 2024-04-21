@@ -25,7 +25,7 @@ ul {
     position: absolute;
     left: 0;
     top: 0;
-    padding: 12px 16px 12px 16px;
+    padding: 12px 16px 12px 20px;
 }
 
 .delete_button:hover {
@@ -83,7 +83,7 @@ input {
 
 ul li {
     position: relative;
-    padding: 12px 8px 12px 45px;
+    padding: 12px 8px 12px 51px;
     background: #9fe2f3;
     font-size: 18px;
     transition: 0.2s;
