@@ -1,13 +1,4 @@
-var note_list = document.getElementById("note_list");
-var elements_from_lists = note_list.getElementsByTagName("li");
-for (let i = 0; i < elements_from_lists.length; i++) {
-    var delete_button = document.createElement("span");
-    //var delete_button_text = document.createTextNode("\u00D7");
-    delete_button.className = "delete_button";
-    //delete_button.appendChild(delete_button_text);
 
-    elements_from_lists[i].appendChild(delete_button);
-}
 
 
 function add_new_note() {
@@ -29,37 +20,39 @@ function add_new_note() {
 
 
     var delete_button = make_delete_button();
-    
+
     new_element.appendChild(delete_button);
 }
 
 function usun_element() {
     var element = this.parentElement;
-    element.style.display = "none";
+    element.remove();
+    reset_colors();
 }
 
 
 
 function mark_as_done() {
-    if (this.style.textDecoration === ""){
+    if (this.style.textDecoration === "") {
         this.style.textDecoration = "line-through";
         this.style.backgroundColor = "grey";
         var today = new Date().toDateString();
         this.textContent += " -" + today;
         this.append(make_delete_button());
-    } else{
+    } else {
         this.style.textDecoration = "";
         this.style.backgroundColor = "white";
-        
+
         var index = this.textContent.indexOf(" -");
         if (index !== -1) {
             this.textContent = this.textContent.substring(0, index);
         }
         this.append(make_delete_button());
+        reset_colors();
     }
 }
 
-function make_delete_button(){
+function make_delete_button() {
     var delete_button = document.createElement("span");
 
 
@@ -77,4 +70,20 @@ function make_delete_button(){
     delete_button.appendChild(div_for_button);
 
     return delete_button;
+}
+
+// chyba tak tego nie zrobie
+function reset_colors() {
+    var note_list = document.getElementById("note_list");
+    var elements_from_lists = note_list.getElementsByTagName("li");
+    for (let i = 0; i < elements_from_lists.length; i++) {
+        var color;
+        if (i % 2 === 0){
+            color = "#b9e7f3";
+        } else {
+            color = "#9fe2f3";
+        }
+        elements_from_lists[i].style.background = color;
+    }
+
 }

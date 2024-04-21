@@ -84,7 +84,7 @@ input {
 ul li {
     position: relative;
     padding: 12px 8px 12px 45px;
-    background: #50ebee;
+    background: #9fe2f3;
     font-size: 18px;
     transition: 0.2s;
     width: 50%;
@@ -107,22 +107,3 @@ ul li:hover {
 }
 
 
-ul li.checked {
-    background: #50ebee;
-    color: #fff;
-    text-decoration: line-through;
-}
-
-
-ul li.checked::before {
-    content: '';
-    position: absolute;
-    border-color: #fff;
-    border-style: solid;
-    border-width: 0 2px 2px 0;
-    top: 10px;
-    left: 16px;
-    transform: rotate(45deg);
-    height: 15px;
-    width: 7px;
-}
