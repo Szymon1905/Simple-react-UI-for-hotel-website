@@ -1,3 +1,4 @@
+"use strict";
 
 var kosz;
 
@@ -78,7 +79,7 @@ function make_delete_button() {
 function reset_colors() {
     var note_list = document.getElementById("note_list");
     var elements_from_lists = note_list.getElementsByTagName("li");
-    for (let i = 0; i < elements_from_lists.length; i++) {
+    for (var i = 0; i < elements_from_lists.length; i++) {
         var color;
         if (i % 2 === 0){
             color = "#b9e7f3";
