@@ -72,7 +72,7 @@ function make_delete_button() {
     return delete_button;
 }
 
-// chyba tak tego nie zrobie
+
 function reset_colors() {
     var note_list = document.getElementById("note_list");
     var elements_from_lists = note_list.getElementsByTagName("li");
