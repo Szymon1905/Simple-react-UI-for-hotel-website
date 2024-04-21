@@ -1,4 +1,5 @@
 
+var kosz;
 
 
 function add_new_note() {
@@ -26,6 +27,7 @@ function add_new_note() {
 
 function usun_element() {
     var element = this.parentElement;
+    kosz = element.textContent;
     element.remove();
     reset_colors();
 }
@@ -86,4 +88,31 @@ function reset_colors() {
         elements_from_lists[i].style.background = color;
     }
 
+}
+
+document.addEventListener("keydown", function(event) {
+    if (event.ctrlKey && event.key === 'z') {
+        przywroc_z_kosza();
+    }
+});
+
+function przywroc_z_kosza() {
+    if (kosz === ""){
+        return;
+    }
+    var element = document.createElement("li");
+    var text_elementu = document.createTextNode(kosz);
+    element.append(text_elementu);
+    element.addEventListener('click', mark_as_done);
+    document.getElementById("note_list").appendChild(element);
+
+    var note_list = document.getElementById("note_list");
+    var elements_from_list = note_list.getElementsByTagName("li");
+    var new_element = elements_from_list[elements_from_list.length - 1];
+
+
+    var delete_button = make_delete_button();
+
+    new_element.appendChild(delete_button);
+    kosz = "";
 }
