@@ -30,9 +30,9 @@ function usun_element() {
     var element = this.parentElement;
     kosz = element.textContent;
     element.remove();
-    reset_colors();
+    reset_colors();  //todo poprawic to bo jak usune jedno a sa inne przekrelone to jest zle
 }
-
+//todo poprawic bo jak usune przkreslenie to kolory tez sie robią
 
 
 function mark_as_done() {
@@ -44,14 +44,14 @@ function mark_as_done() {
         this.append(make_delete_button());
     } else {
         this.style.textDecoration = "";
-        this.style.backgroundColor = "white";
+        this.style.backgroundColor = "white";  // tu zmieniam na baiły żeby reset colors wiedizał że ma zminić na jakiso dcień niebeiskeigo czemu tego nie roibi i oztsaiwa biały
 
         var index = this.textContent.indexOf(" -");
         if (index !== -1) {
             this.textContent = this.textContent.substring(0, index);
         }
         this.append(make_delete_button());
-        reset_colors();
+        reset_colors();  
     }
 }
 
@@ -81,14 +81,15 @@ function reset_colors() {
     var elements_from_lists = note_list.getElementsByTagName("li");
     for (var i = 0; i < elements_from_lists.length; i++) {
         var color;
-        if (i % 2 === 0){
-            color = "#b9e7f3";
-        } else {
-            color = "#9fe2f3";
+        if (elements_from_lists[i].style.backgroundColor !== "grey"){
+            if (i % 2 === 0){
+                color = "#b9e7f3";
+            } else {
+                color = "#9fe2f3";
+            }
+            elements_from_lists[i].style.background = color;
         }
-        elements_from_lists[i].style.background = color;
     }
-
 }
 
 document.addEventListener("keydown", function(event) {
