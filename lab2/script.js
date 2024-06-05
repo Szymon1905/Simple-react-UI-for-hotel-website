@@ -1,6 +1,6 @@
 "use strict";
 
-var kosz;
+var bin = "";
 
 
 function add_new_note() {
@@ -28,7 +28,7 @@ function add_new_note() {
 
 function usun_element() {
     var element = this.parentElement;
-    kosz = element.textContent;
+    bin = element.textContent;
     element.remove();
     reset_colors();  
 }
@@ -94,16 +94,17 @@ function reset_colors() {
 
 document.addEventListener("keydown", function(event) {
     if (event.ctrlKey && event.key === 'z') {
-        przywroc_z_kosza();
+        restore_from_bin();
     }
 });
 
-function przywroc_z_kosza() {
-    if (kosz === ""){
+function restore_from_bin() {
+    if (bin === ""){
+        alert("kosz jest pusty");
         return;
     }
     var element = document.createElement("li");
-    var text_elementu = document.createTextNode(kosz);
+    var text_elementu = document.createTextNode(bin);
     element.append(text_elementu);
     element.addEventListener('click', mark_as_done);
     document.getElementById("note_list").appendChild(element);
@@ -116,5 +117,5 @@ function przywroc_z_kosza() {
     var delete_button = make_delete_button();
 
     new_element.appendChild(delete_button);
-    kosz = "";
+    bin = "";
 }
