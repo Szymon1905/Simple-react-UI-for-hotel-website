@@ -15,8 +15,8 @@
     --copy-large: 26px;
     --copy-small: 16px;
 
-    /*--title-font: "Italiana", sans-serif; */
-    --title-font:'Times New Roman', Times, serif;
+    /* --title-font:'Times New Roman', Times, serif; */
+    --title-font: 'Italiana', serif;
     --transition: all 0.3s ease-in-out;
 }
 
@@ -55,7 +55,7 @@ body{
 
 .fixed-navigation {
     width: 100%;
-    padding: 24px 64px;
+    padding: 12px 64px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -65,7 +65,7 @@ body{
 }
 
 .logo{
-    height: 48px;
+    height: 36px;
     width: auto;
 }
 
@@ -94,7 +94,7 @@ body{
 .button{
     display: flex;
     flex-direction: row;
-    padding: 8px 32px;
+    padding: 8px 24px;
     text-decoration: none;
     border: none;
     background-color: transparent;
@@ -269,14 +269,14 @@ body{
 .card-image {
     width: 100%;
     border-radius: var(--radius-small);
-    height: 300px;
+    height: 150px;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: right;
     background-size: cover;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: end;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: start;
     padding: 1rem;
 }
 
@@ -294,14 +294,14 @@ body{
     border-radius: var(--radius-small);
     display: flex;
     flex-direction: row;
-    justify-content: start;
+    justify-content: center;
     align-items: center;
-    column-gap: 8px;
 }
 
 .heart {
     padding: 8px 8px;
     border-radius: var(--radius-medium);
+    display: none;
 }
 
 .title-section{
@@ -322,13 +322,13 @@ body{
     flex-direction: column;
     padding-top: 96px;
     padding-bottom: 96px;
-    row-gap: 64px;
+    row-gap: 32px;
     justify-content: center;
     align-items: center;
 }
 
 .searchbar{
-    width: 45%;
+    width: 60%;
     padding: 12px;
     border: 1px solid var(--primary-dark);
     border-radius: var(--radius-medium);
@@ -347,7 +347,7 @@ body{
     padding: 16px;
     display: flex;
     flex-direction: column;
-    row-gap: 12px;
+    row-gap: 24px;
 }
 
 .hotel-card:nth-child(1){
@@ -380,11 +380,12 @@ body{
 
 
 .text-small{
+    text-wrap: balance;
     text-align: justify;
     text-justify: inter-word;
     line-height: 24px;
-    margin-right: 18px;
 }
+
 .long{
     margin-top: 32px;
     margin-bottom: 32px;
@@ -399,6 +400,7 @@ body{
 .footer{
     padding-top: 96px;
     padding-bottom: 96px;
+    padding-inline: 65px;
 }
 
 .footer>.card-image{
@@ -421,6 +423,7 @@ body{
 
 .hidden{
     display: none;
+    flex-direction: row;
 }
 
 @media screen and (max-width:1250px) {
