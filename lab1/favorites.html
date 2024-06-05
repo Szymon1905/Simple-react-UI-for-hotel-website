@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Favorite</title>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Roboto+Flex:opsz,wght@8..144,300&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="./style.css"/>
+    <link rel="stylesheet" href="./mediastyles.css"/>
+    
+</head>
+<body>
+    <nav class="fixed-navigation">
+        <img class="logo" src="./Assets/logo.svg"/>
+        <ul class="nav-links">
+            <li><a class="nav-link" href="index.html">Home</a></li>
+            <li><a class="nav-link" href="browse_hotels.html">Find offers</a></li>
+            <li><a class="nav-link" href="#">Add new offers</a></li>
+            <li><a class="nav-link" href="my_offers.html">My offers</a></li>
+            <li><a class="nav-link" href="favorites.html"><b>Favorites</b></a></li>
+            <a class="button primary" href="index.html">Log out</a>
+        </ul>
+        <button class="button primary hidden">Menu</button>
+    </nav>
+    <section class="footer-secondary">
+        <p class="title-large">Favorite offers</p>
+    </section>
+    <section id="browse" class="browse-section">
+        <p class="title-middle">Explore the hotels</p>
+        <input class="searchbar" placeholder="Search by hotel name, place etc.">
+        <section class="grid hotel-cards">
+            <article class="hotel-card">
+                <div class="card-image">
+                    <p class="chip">Florence</p>
+                    <p class="chip"><img src="./Assets/heart_2.svg"></p>
+                </div>
+                <p class="text-middle">Harmony Hideaway Hotel</p>
+                <p class="text-small">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dapibus quis felis a venenatis. Suspendisse accumsan aliquam lorem, sit amet ultricies justo tristique nec.</p>
+                <div class="hotel-card-footer">
+                    <p class="text-middle">★★★★★</p>
+                    <p class="text-middle">100€/room</p>
+                </div>
+                <a class="button primary" href="hotel_page.html"> View offer <img src="./Assets/Arrow.svg"></a>
+            </article>
+            <article class="hotel-card">
+                <div class="card-image">
+                    <p class="chip">Sienna</p>
+                    <p class="chip"><img src="./Assets/heart_2.svg"></p>
+                </div>
+                <p class="text-middle">Favourite Hotel</p>
+                <p class="text-small">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dapibus quis felis a venenatis. Suspendisse accumsan aliquam lorem, sit amet ultricies justo tristique nec.</p>
+                <div class="hotel-card-footer">
+                    <p class="text-middle">★★★★★</p>
+                    <p class="text-middle">115€/room</p>
+                </div>
+                <a class="button primary" href="hotel_page.html"> View offer <img src="./Assets/Arrow.svg"></a>
+            </article>
+            <article class="hotel-card">
+                <div class="card-image">
+                    <p class="chip">Moscow</p>
+                    <p class="chip"><img src="./Assets/heart_2.svg"></p>
+                </div>
+                <p class="text-middle">Favourite Hotel</p>
+                <p class="text-small">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dapibus quis felis a venenatis. Suspendisse accumsan aliquam lorem, sit amet ultricies justo tristique nec.</p>
+                <div class="hotel-card-footer">
+                    <p class="text-middle">★★★★★</p>
+                    <p class="text-middle">255€/room</p>
+                </div>
+                <a class="button primary" href="hotel_page.html"> View offer <img src="./Assets/Arrow.svg"></a>
+            </article>
+        </section>
+    </section>
+</body>

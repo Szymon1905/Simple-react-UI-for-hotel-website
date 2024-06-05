@@ -30,9 +30,9 @@ function usun_element() {
     var element = this.parentElement;
     kosz = element.textContent;
     element.remove();
-    reset_colors();  //todo poprawic to bo jak usune jedno a sa inne przekrelone to jest zle
+    reset_colors();  
 }
-//todo poprawic bo jak usune przkreslenie to kolory tez sie robią
+
 
 
 function mark_as_done() {
@@ -44,7 +44,7 @@ function mark_as_done() {
         this.append(make_delete_button());
     } else {
         this.style.textDecoration = "";
-        this.style.backgroundColor = "white";  // tu zmieniam na baiły żeby reset colors wiedizał że ma zminić na jakiso dcień niebeiskeigo czemu tego nie roibi i oztsaiwa biały
+        this.style.backgroundColor = "white";  
 
         var index = this.textContent.indexOf(" -");
         if (index !== -1) {
@@ -59,14 +59,14 @@ function make_delete_button() {
     var delete_button = document.createElement("span");
 
 
-    delete_button.style.backgroundImage = "url('stuff/remove.png')";
+    delete_button.style.backgroundImage = "url('assets/remove.png')";
     delete_button.style.backgroundSize = "32px 34px";
     delete_button.style.backgroundRepeat = "no-repeat";
     delete_button.style.backgroundPosition = "center";
 
     var div_for_button = document.createElement("div");
     delete_button.style.width = "44px";
-    delete_button.style.height = "51px";
+    delete_button.style.height = "44px";
 
     delete_button.className = "delete_button";
     delete_button.onclick = usun_element;
