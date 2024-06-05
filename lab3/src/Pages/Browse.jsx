@@ -25,7 +25,7 @@ const Browse = () =>{
 
     
     
-    const handleLogout = async () => {
+    const Logout = async () => {
         await logout(); 
     };  
 
@@ -80,7 +80,7 @@ const Browse = () =>{
         setSelectedHotel(hotelName);
     };
     
-
+    
     return(
         <body>
             <nav class="fixed-navigation">
@@ -93,7 +93,7 @@ const Browse = () =>{
                     <li><a class="nav-link" href="#">Favorites</a></li>
                     {user ? (
                         <>
-                            <button className="button primary" onClick={handleLogout}>Logout</button>
+                            <button className="button primary" onClick={Logout}>Logout</button>
                         </>
                     ) : (
                         <>
