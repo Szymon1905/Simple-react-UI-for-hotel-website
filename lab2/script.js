@@ -1,6 +1,49 @@
 "use strict";
 
 var bin = "";
+var element_to_delete;
+
+document.addEventListener("DOMContentLoaded", function() {
+    
+});
+
+function confirm_del(){
+    if (element_to_delete != null) {
+        var index = element_to_delete.textContent.indexOf(" -");
+        if (index !== -1) { // -1 jak go nie ma
+            element_to_delete.textContent = element_to_delete.textContent.substring(0, index);
+        }
+        bin = element_to_delete.textContent;
+        element_to_delete.remove();
+        reset_colors();  
+        modal.style.display = "none";
+    }
+}
+
+function cancel_del(){
+    element_to_delete.style.textDecoration = "";
+    element_to_delete.style.backgroundColor = "white";  
+
+    var index = element_to_delete.textContent.indexOf(" -");
+    if (index !== -1) {
+        element_to_delete.textContent = element_to_delete.textContent.substring(0, index);
+    }
+    element_to_delete.append(make_delete_button());
+    reset_colors();
+
+    element_to_delete = null;
+    modal.style.display = "none";
+}
+
+function close_del(){
+    element_to_delete.style.textDecoration = "";
+    element_to_delete.style.backgroundColor = "white"; 
+    reset_colors();
+
+    element_to_delete = null;
+    modal.style.display = "none";
+}
+
 
 
 function add_new_note() {
@@ -23,14 +66,30 @@ function add_new_note() {
 
     var delete_button = make_delete_button();
 
+    delete_button.addEventListener('click', function(event) {
+        event.stopPropagation(); // zeby nie bylo szare jak naciskam X bo psuje w cancel button
+        delete_note.call(this);
+    });
+
     new_element.appendChild(delete_button);
 }
 
-function usun_element() {
+function delete_note() {
+    var modal = document.getElementById("modal");
+    modal.style.display = "block";
+
+    
     var element = this.parentElement;
-    bin = element.textContent;
-    element.remove();
-    reset_colors();  
+    var text = element.textContent;
+    console.log(text);
+
+    var task = document.getElementById("task-text");
+    task.textContent = text;
+
+    var element = this.parentElement;
+    element_to_delete = element;
+    //element.remove();
+    //reset_colors();  
 }
 
 
@@ -69,7 +128,7 @@ function make_delete_button() {
     delete_button.style.height = "44px";
 
     delete_button.className = "delete_button";
-    delete_button.onclick = usun_element;
+    delete_button.onclick = delete_note;
     delete_button.appendChild(div_for_button);
 
     return delete_button;
@@ -119,3 +178,12 @@ function restore_from_bin() {
     new_element.appendChild(delete_button);
     bin = "";
 }
+
+
+function get_text_deletion(){
+
+    return "test1";
+}
+
+
+

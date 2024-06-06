@@ -18,6 +18,15 @@
             <span onclick="add_new_note()" class="add_item_button">Dodaj</span>
         </div>
     </div>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span onclick="close_del()" class="close">&times;</span>
+            <p>Czy na pewno chcesz usunąć zadanie o treści: <span id="task-text"></span></p>
+            <button onclick="confirm_del()" class="confirm-delete">Tak</button>
+            <button onclick="cancel_del()" class="cancel-delete">Nie</button>
+        </div>
+    </div>
     
 
     <ul id="note_list">
