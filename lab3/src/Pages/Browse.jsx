@@ -18,10 +18,10 @@ const Browse = () =>{
     const navigate = useNavigate();
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    const [setError] = useState(null);
+    //const [setError] = useState(null);
     //const [showLoginOptions, setShowLoginOptions] = useState(false);
     const [hotels, setHotels] = useState([]); 
-    const [setSelectedHotel] = useState(null);
+    const [selectedHotel, setSelectedHotel] = useState(null);
 
     
     
@@ -50,7 +50,7 @@ const Browse = () =>{
             await signInWithEmailAndPassword(auth, email, password);
             navigate("/");
         } catch (error) {
-            setError(error.message);
+            console.log(error.message);
         }
     };
 
@@ -59,7 +59,7 @@ const Browse = () =>{
             await createUserWithEmailAndPassword(auth, email, password);
             navigate("/");
         } catch (error) {
-            setError(error.message);
+            console.log(error.message);
         }
     };
 
@@ -70,7 +70,7 @@ const Browse = () =>{
                 const hotelsData = await getHotelData();
                 setHotels(hotelsData);
             } catch (error) {
-                setError(error);
+                console.log(error);
             }
         };
         fetchHotels();
@@ -87,7 +87,7 @@ const Browse = () =>{
                 <img class="logo" src={logo} alt="Logo"/>
                 <ul class="nav-links">
                     <li><a class="nav-link" href="#">Home</a></li>
-                    <li><a class="nav-link bold" href="#browse">Find offers</a></li>
+                    <li><a class="nav-link" href="#browse">Find offers</a></li>
                     <li><a class="nav-link" href="#">Add new offers</a></li>
                     <li><a class="nav-link" href="#">My offers</a></li>
                     <li><a class="nav-link" href="#">Favorites</a></li>
@@ -97,14 +97,14 @@ const Browse = () =>{
                         </>
                     ) : (
                         <>
-                            <button className="button primary" onClick={GoogleLogin}>Login with Google</button>
-                            <div>
-                                <input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} />
-                                <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} />
+                            <button className="button primary double" onClick={GoogleLogin}>Google login</button>
+                            <div className='email-container'>
+                                <input className="inputfield"  type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} />
+                                <input className="inputfield" type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} />
                             </div>
-                            <div>
-                                <button className="button primary" onClick={EmailLogin}>Login with Emails</button>
-                                <button className="button primary" onClick={EmailRegister}>Signup with Email</button>
+                            <div className='email-container'>
+                                <button className="button primary double" onClick={EmailLogin}>Login email</button>
+                                <button className="button primary double" onClick={EmailRegister}>Register email</button>
                             </div>
                         </>
                     )}

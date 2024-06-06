@@ -16,7 +16,7 @@ function App() {
                         <Route path="/" element={<Browse />}></Route>
                         <Route path="/Page" element={<Page />} />
                         <Route path="/Page/:hotelName" element={<Page />} />
-
+                        
                     </Routes>
                 </div>
             </div>

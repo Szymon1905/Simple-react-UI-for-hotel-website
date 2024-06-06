@@ -2,9 +2,8 @@
 Repozytorium na kurs Programowanie interfejsow webowych
 Szymon Borzdyński 264465 Piątek Nieparzysty 9:15
 
-[LAB3](https://lab3-szymonb.web.app/)
 
-[LAB4](https://lab4-szymonb.web.app/)
-Zielony przycisk LOG IN w prawym górnym rogu
+[LAB 34](https://lab34-szymonb.web.app/)
+
 
 
