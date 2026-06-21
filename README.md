@@ -1,4 +1,4 @@
-# Programowanie Interfejsów Webowych / Web Interfaces Programming course
+# React web app for Hotel
 
 ## Technologies Used
 React
