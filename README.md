@@ -1,4 +1,8 @@
 # React web app for Hotel
+Hotel Booking UI (React)
+A frontend web app built with React for browsing hotel offers.
+Authentication: Cloud-based authentication (Google OAuth and Email/Password) using Firebase.
+State Management / UI: Base interface allows for browsing and adding offers (data is currently mocked on the front-end, designed to be connected to a backend REST API).
 
 ## Technologies Used
 React
