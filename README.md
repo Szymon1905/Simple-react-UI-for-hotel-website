@@ -15,9 +15,9 @@ Responsive components and page layout
 
 ## Laboratory Projects
 
-* **LAB 1:** https://lab1-szymonb.web.app
-* **LAB 2:** https://lab2-szymonb.web.app
-* **LAB 3–4:** https://lab34-szymonb.web.app
+* **LAB 1:** Basic welcome page https://lab1-szymonb.web.app
+* **LAB 2:** TODO list app https://lab2-szymonb.web.app
+* **LAB 3–4:** Google authentication https://lab34-szymonb.web.app
 
 ## Running the Project Locally
 
